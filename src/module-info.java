@@ -13,6 +13,7 @@ module scene02 {
 	exports member.service;
 	exports login.url;
 
+	requires java.sql;
 	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.fxml;

@@ -1,5 +1,6 @@
 package login.service;
 
+import common.CommonService;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
@@ -10,13 +11,20 @@ import login.dto.LoginDTO;
 import member.main.MemberMain;
 
 public class LoginServiceImpl implements LoginService{
+	private LoginDAO dao;
+	public LoginServiceImpl() {
+		dao = new LoginDAO();
+	}
 
 	@Override
 	public void Loginfunc(TextField fxId ,TextField fxPwd) {
 		System.out.println("---서비스 로그인 확인---");
 		System.out.println("id : "+ fxId.getText() );
 		 System.out.println("pwd :" + fxPwd.getText() );
-		 LoginDTO dto = LoginDAO.db.get(fxId.getText());
+		//LoginDTO dto = LoginDAO.db.get(fxId.getText());
+		 
+		 LoginDTO dto = dao.getUser(fxId.getText());
+		 
 		 System.out.println("dto : "+ dto);
 		 String msg = null;
 		
@@ -44,8 +52,10 @@ public class LoginServiceImpl implements LoginService{
 	@Override
 	public void cancelfunc(Parent root) {
 		System.out.println("---- 서비스 창 닫기 ----");
-		Stage stage = (Stage)root.getScene().getWindow();
-		 stage.close();
+		//Stage stage = (Stage)root.getScene().getWindow();
+		 //stage.close();
+		CommonService.cancleFunc(root);
+		
 		
 	}
 

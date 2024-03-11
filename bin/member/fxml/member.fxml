@@ -11,8 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="240.0" prefWidth="426.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="member.controller.MemberController">
+<AnchorPane prefHeight="240.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="member.controller.MemberController">
    <children>
       <Label alignment="TOP_CENTER" layoutX="148.0" layoutY="-5.0" prefHeight="36.0" prefWidth="131.0" text="회원가입">
          <font>
@@ -41,6 +40,6 @@
       <CheckBox fx:id="chkMovie" layoutX="138.0" layoutY="167.0" mnemonicParsing="false" text="영화" />
       <CheckBox fx:id="chkMung" layoutX="196.0" layoutY="167.0" mnemonicParsing="false" text="멍타기" />
       <Button layoutX="74.0" layoutY="197.0" mnemonicParsing="false" onAction="#registerFunc" prefHeight="25.0" prefWidth="109.0" text="회원가입" />
-      <Button layoutX="253.0" layoutY="197.0" mnemonicParsing="false" onAction="#registerFunc" prefHeight="25.0" prefWidth="109.0" text="취소" />
+      <Button layoutX="253.0" layoutY="197.0" mnemonicParsing="false" onAction="#cancelFunc" prefHeight="25.0" prefWidth="109.0" text="취소" />
    </children>
 </AnchorPane>
